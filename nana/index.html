@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+	<style>
+		body{
+			background-color: rgb(40, 43, 35);
+		}
+		.animated-object {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  animation-name: myAnimation;
+  animation-duration: 2s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(30deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+	</style>
+</head>
+<body>
+	
+  <div class="animated-object"  style="padding-bottom: 50px; background-color: rgb(213, 51, 235);">	<h1 class="animated-object" style="padding:40px"> Hi nana</h1>
+  </div>
+
+  <script>
+	// You can use JavaScript to modify the animation dynamically
+
+// Get the animated object element
+const animatedObject = document.querySelector('.animated-object');
+
+// Example: Change the background color on mouseover
+animatedObject.addEventListener('mouseover', function() {
+  animatedObject.style.backgroundColor = 'red';
+});
+
+// Example: Reset the background color on mouseout
+animatedObject.addEventListener('mouseout', function() {
+  animatedObject.style.backgroundColor = 'blue';
+});
+
+  </script>
+</body>
+</html>
